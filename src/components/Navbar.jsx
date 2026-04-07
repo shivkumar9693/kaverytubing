@@ -55,9 +55,17 @@ const Navbar = ({ activeSection, setActiveSection }) => {
         <div className="flex justify-between items-center h-full">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => handleNavClick('home')}>
-            <span className="text-white text-2xl font-bold tracking-tighter">
-              KAVERY<span className="text-[#F97316]">TUBING</span>
-            </span>
+            <div className="w-12 h-12 rounded-full bg-white shadow-xl ring-2 ring-white/20 overflow-hidden flex items-center justify-center">
+              <img src="/logo.png" alt="Kaveru Tubing Solutions Pvt. Ltd." className="w-full h-full object-cover" />
+            </div>
+            <div className="ml-3 leading-tight">
+              <div className="text-white text-lg sm:text-xl font-black tracking-tight">
+                KAVERY<span className="text-[#F97316]">TUBING</span>
+              </div>
+              <div className="text-white/80 text-[10px] sm:text-xs font-bold tracking-[0.22em] uppercase">
+                Solutions Pvt. Ltd.
+              </div>
+            </div>
           </div>
 
           {/* Desktop Nav */}

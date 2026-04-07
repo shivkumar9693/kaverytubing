@@ -99,7 +99,7 @@ const Products = () => {
           {/* Download PDF button */}
           <a
             href="/kavery-catalog.pdf"
-            download="Kavery-Tubing-Catalog.pdf"
+            download="Kaveru-Tubing-Solutions-Catalog.pdf"
             className="flex items-center gap-3 bg-[#0A2540] text-white px-10 py-4 rounded-full font-bold hover:bg-[#1F2937] transition-all transform hover:scale-105 shadow-xl"
           >
             <span>📄</span> Download Full Catalog
@@ -107,7 +107,7 @@ const Products = () => {
 
           {/* WhatsApp button */}
           <a
-            href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20request%20the%20Kavery%20Tubing%20product%20catalog."
+            href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20request%20the%20Kaveru%20Tubing%20Solutions%20product%20catalog."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-[#128C7E] text-white px-10 py-4 rounded-full font-bold hover:bg-[#075E54] transition-all transform hover:scale-105 shadow-xl"

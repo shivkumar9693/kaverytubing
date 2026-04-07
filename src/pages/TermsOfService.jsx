@@ -64,7 +64,7 @@ const TermsOfService = () => {
             <h1 className="text-4xl md:text-6xl font-black italic leading-tight">
               Terms Of <span className="text-[#F97316]">Service</span>
             </h1>
-            <p className="mt-4 text-gray-400 font-medium">Kavery Tubing Pvt Ltd — Governing all transactions</p>
+            <p className="mt-4 text-gray-400 font-medium">Kavery Tubing Solutions Pvt. Ltd. — Governing all transactions</p>
           </div>
 
           <div className="space-y-12 text-gray-300 leading-relaxed font-medium text-lg">
@@ -77,7 +77,7 @@ const TermsOfService = () => {
               {
                 number: '02',
                 title: 'Export & Shipment',
-                body: 'Kavery Tubing complies with all international shipping standards. Shipment timelines are estimates and subject to regional logistics conditions and customs clearances for global exports.'
+                body: 'Kavery Tubing Solutions Pvt. Ltd. complies with all international shipping standards. Shipment timelines are estimates and subject to regional logistics conditions and customs clearances for global exports.'
               },
               {
                 number: '03',
@@ -109,7 +109,7 @@ const TermsOfService = () => {
 
             <div className="pt-8 border-t border-white/10">
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-gray-500">
-                These terms govern all transactions with Kavery Tubing Pvt Ltd. — info@kaverytubing.com
+                These terms govern all transactions with Kavery Tubing Solutions Pvt. Ltd. — info@kaverytubing.com
               </p>
             </div>
           </div>

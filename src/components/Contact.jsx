@@ -29,7 +29,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-1">Call Us Now</p>
-                  <p className="text-2xl font-bold">+91 98765 43210</p>
+                  <a
+                    href="tel:+919876543210"
+                    className="text-lg sm:text-2xl font-bold leading-tight break-words hover:text-[#F97316] transition-colors"
+                  >
+                    +91 98765 43210
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-6 group hover:translate-x-3 transition-transform">
@@ -38,7 +43,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-1">Email Us</p>
-                  <p className="text-2xl font-bold">info@kaverytubing.com</p>
+                  <a
+                    href="mailto:info@kaverytubing.com"
+                    className="text-lg sm:text-2xl font-bold leading-tight break-all hover:text-[#F97316] transition-colors"
+                  >
+                    info@kaverytubing.com
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-6 group hover:translate-x-3 transition-transform">
@@ -47,7 +57,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-1">Visit Factory</p>
-                  <p className="text-2xl font-bold">GIDC Industrial Area, Metoda, Gujarat, India</p>
+                  <p className="text-lg sm:text-2xl font-bold leading-tight break-words">
+                    GIDC Industrial Area, Metoda, Gujarat, India
+                  </p>
                 </div>
               </div>
             </div>

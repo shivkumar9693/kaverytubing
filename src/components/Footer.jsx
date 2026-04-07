@@ -171,9 +171,19 @@ const Footer = () => {
 
           {/* Logo & About */}
           <div className="space-y-6">
-            <span className="text-3xl font-black italic tracking-tighter cursor-pointer">
-              KAVERY<span className="text-[#F97316]">TUBING</span>
-            </span>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-white shadow-xl ring-2 ring-white/10 overflow-hidden flex items-center justify-center">
+                <img src="/logo.png" alt="Kaveru Tubing Solutions Pvt. Ltd." className="w-full h-full object-cover" />
+              </div>
+              <div className="leading-tight">
+                <div className="text-2xl font-black italic tracking-tighter cursor-pointer">
+                  KAVERY<span className="text-[#F97316]">TUBING</span>
+                </div>
+                <div className="text-[10px] text-white/70 font-bold tracking-[0.22em] uppercase">
+                  Solutions Pvt. Ltd.
+                </div>
+              </div>
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs font-medium">
               A global leader in high-performance stainless steel products delivering precision and quality for critical industrial applications worldwide.
             </p>
@@ -241,7 +251,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
           <p className="text-gray-500 text-[10px] font-black uppercase tracking-[0.3em]">
-            © {new Date().getFullYear()} Kavery Tubing Pvt Ltd. All Rights Reserved.
+            © {new Date().getFullYear()} Kaveru Tubing Solutions Pvt. Ltd. All Rights Reserved.
           </p>
           <div className="flex gap-8 text-[10px] text-gray-500 font-bold uppercase tracking-widest italic">
             <Link to="/privacy-policy" className="hover:text-[#F97316] transition-colors">Privacy Policy</Link>

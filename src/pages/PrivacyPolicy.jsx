@@ -64,7 +64,7 @@ const PrivacyPolicy = () => {
             <h1 className="text-4xl md:text-6xl font-black italic leading-tight">
               Privacy <span className="text-[#F97316]">Policy</span>
             </h1>
-            <p className="mt-4 text-gray-400 font-medium">Kavery Tubing Pvt Ltd — Last updated April 2024</p>
+            <p className="mt-4 text-gray-400 font-medium">Kavery Tubing Solutions Pvt. Ltd. — Last updated April 2024</p>
           </div>
 
           <div className="space-y-12 text-gray-300 leading-relaxed font-medium text-lg">
@@ -72,7 +72,7 @@ const PrivacyPolicy = () => {
               {
                 number: '01',
                 title: 'Data Collection',
-                body: 'At Kavery Tubing, we collect minimal information necessary to process your inquiries and orders. This may include your name, company name, contact number, and email address provided through direct communication.'
+                body: 'At Kavery Tubing Solutions Pvt. Ltd., we collect minimal information necessary to process your inquiries and orders. This may include your name, company name, contact number, and email address provided through direct communication.'
               },
               {
                 number: '02',

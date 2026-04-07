@@ -2,8 +2,11 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Founder from './components/Founder';
 import About from './components/About';
 import Products from './components/Products';
+import Reviews from './components/Reviews';
+import Partnership from './components/Partnership';
 import Quality from './components/Quality';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -24,8 +27,11 @@ const ScrollToTop = () => {
 const HomePage = ({ activeSection, setActiveSection }) => (
   <main>
     <Hero />
+    <Founder />
     <About />
     <Products />
+    <Reviews />
+    <Partnership />
     <Quality />
     <Contact />
   </main>
