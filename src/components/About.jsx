@@ -28,6 +28,29 @@ const About = () => {
             <p className="text-gray-600 text-lg leading-relaxed">
               With a legacy of excellence spanning over two decades, we've served diverse industrial sectors, from oil and gas to pharmaceutical and food processing, delivering precision-engineered solutions that last a lifetime.
             </p>
+            
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <h3 className="text-2xl font-bold text-[#0A2540] mb-4">Why Choose Us?</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#F97316] font-bold mt-0.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span className="text-gray-700 font-medium">Uncompromising Quality Control & Testing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#F97316] font-bold mt-0.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span className="text-gray-700 font-medium">State-of-the-art Manufacturing Facilities</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#F97316] font-bold mt-0.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span className="text-gray-700 font-medium">Timely Global Delivery & Export Capabilities</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#F97316] font-bold mt-0.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span className="text-gray-700 font-medium">Custom Dimensions & Grade Specifications</span>
+                </li>
+              </ul>
+            </div>
+
             <div className="grid grid-cols-2 gap-8 py-4">
               <div>
                 <h3 className="text-4xl font-black text-[#0A2540]">20+</h3>

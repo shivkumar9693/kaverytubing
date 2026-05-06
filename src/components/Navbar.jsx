@@ -7,7 +7,11 @@ const BarChart = () => <span>📊</span>;
 import { motion, AnimatePresence } from 'framer-motion';
 const Menu = ({ size }) => <span style={{ fontSize: size }}>☰</span>;
 const X = ({ size }) => <span style={{ fontSize: size }}>✕</span>;
-const PhoneCall = ({ size }) => <span style={{ fontSize: size }}>📞</span>;
+const PhoneCall = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </svg>
+);
 const Navbar = ({ activeSection, setActiveSection }) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -19,7 +23,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     { name: 'Home', id: 'home' },
     { name: 'About', id: 'about' },
     { name: 'Products', id: 'products' },
-    { name: 'Quality', id: 'quality' },
+    { name: 'Process', id: 'process' },
     { name: 'Contact', id: 'contact' },
   ];
 
@@ -56,7 +60,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => handleNavClick('home')}>
             <div className="w-12 h-12 rounded-full bg-white shadow-xl ring-2 ring-white/20 overflow-hidden flex items-center justify-center">
-              <img src="/logo.png" alt="Kaveru Tubing Solutions Pvt. Ltd." className="w-full h-full object-cover" />
+              <img src="/logo.png" alt="KaveryTubing Solutions Pvt. Ltd." className="w-full h-full object-cover" />
             </div>
             <div className="ml-3 leading-tight">
               <div className="text-white text-lg sm:text-xl font-black tracking-tight">

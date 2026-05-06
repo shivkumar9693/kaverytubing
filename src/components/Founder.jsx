@@ -54,7 +54,7 @@ const Founder = () => {
               <div className="mt-6 flex items-center justify-between gap-4">
                 <div>
                   <div className="text-[#0A2540] font-black">Founder</div>
-                  <div className="text-gray-500 text-sm font-semibold">Kavery Tubing Solutions Pvt. Ltd.</div>
+                  <div className="text-gray-500 text-sm font-semibold"> Kavery Tubing Solutions Pvt. Ltd.</div>
                 </div>
                 <a
                   href="#contact"

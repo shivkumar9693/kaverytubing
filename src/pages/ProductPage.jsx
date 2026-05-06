@@ -4,15 +4,24 @@ import { useNavigate, useParams, Link } from 'react-router-dom';
 
 // Import images for use in details
 import pipesImg from '../assets/pipes.png';
+import pipesAngle1 from '../assets/pipes_angle1.png';
+import pipesAngle2 from '../assets/pipes_angle2.png';
+import pipesAngle3 from '../assets/pipes_angle3.png';
 import tubesImg from '../assets/tubes.png';
+import tubesAngle1 from '../assets/tubes_angle1.png';
+import tubesAngle2 from '../assets/tubes_angle2.png';
+import tubesAngle3 from '../assets/tubes_angle3.png';
 import fittingsImg from '../assets/fittings.png';
+import fittingsAngle1 from '../assets/fittings_angle1.png';
+import fittingsAngle2 from '../assets/fittings_angle2.png';
+import fittingsAngle3 from '../assets/fittings_angle3.png';
 
 // Product Data with images
 const PRODUCT_DETAILS = {
   "pipes": {
     title: "Stainless Steel Welded Pipes & Tubes",
     description: "Our stainless steel welded pipes and tubes are manufactured using premium quality raw materials and advanced technology to ensure high strength and corrosion resistance.",
-    images: [pipesImg, pipesImg, pipesImg, pipesImg], // You can add different angle paths here
+    images: [pipesImg, pipesAngle1, pipesAngle2, pipesAngle3], // You can add different angle paths here
     specifications: [
       { label: "Range", value: "6.00 mm OD to 219.08 mm OD" },
       { label: "Thickness", value: "0.3 mm to 6.00 mm" },
@@ -37,7 +46,7 @@ const PRODUCT_DETAILS = {
   "tubes": {
     title: "Precision Stainless Steel Tubes",
     description: "Manufactured for high-precision applications requiring tight tolerances and superior mechanical properties.",
-    images: [tubesImg, tubesImg, tubesImg, tubesImg],
+    images: [tubesImg, tubesAngle1, tubesAngle2, tubesAngle3],
     specifications: [
       { label: "Outer Diameter", value: "4.00 mm to 101.60 mm" },
       { label: "Wall Thickness", value: "0.2 mm to 3.5 mm" },
@@ -49,7 +58,7 @@ const PRODUCT_DETAILS = {
   "fittings": {
     title: "Stainless Steel Pipe Fittings",
     description: "Comprehensive range of forged and butt-weld fittings for seamless fluid flow management.",
-    images: [fittingsImg, fittingsImg, fittingsImg, fittingsImg],
+    images: [fittingsImg, fittingsAngle1, fittingsAngle2, fittingsAngle3],
     specifications: [
       { label: "Type", value: "Elbow, Tee, Reducer, Cap, Stub End" },
       { label: "Method", value: "Forged / Fabricated" }

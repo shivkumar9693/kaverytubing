@@ -7,9 +7,11 @@ import About from './components/About';
 import Products from './components/Products';
 import Reviews from './components/Reviews';
 import Partnership from './components/Partnership';
-import Quality from './components/Quality';
+import Certifications from './components/Certifications';
+import ManufacturingProcess from './components/ManufacturingProcess';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Distributor from './components/Distributor';
 import ProductPage from './pages/ProductPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
@@ -27,13 +29,15 @@ const ScrollToTop = () => {
 const HomePage = ({ activeSection, setActiveSection }) => (
   <main>
     <Hero />
-    <Founder />
     <About />
     <Products />
+    <Distributor />
     <Reviews />
-    <Partnership />
-    <Quality />
+    <Founder />
+    <Certifications />
+    <ManufacturingProcess />
     <Contact />
+    <Partnership />
   </main>
 );
 
@@ -45,7 +49,7 @@ function App() {
       <ScrollToTop />
       <div className="relative bg-white selection:bg-[#F97316] selection:text-white">
         <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
-        
+
         <Routes>
           <Route path="/" element={<HomePage activeSection={activeSection} setActiveSection={setActiveSection} />} />
           <Route path="/product/:productId" element={<ProductPage />} />

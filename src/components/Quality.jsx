@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-const Shield = () => <span>🛡️</span>;
-const Award = () => <span>🏆</span>;
-const CheckCircle = () => <span>✅</span>;
-const BarChart = () => <span>📊</span>;
+const Shield = () => <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>;
+const Award = () => <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>;
+const CheckCircle = ({ className, size = 40 }) => <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>;
+const BarChart = () => <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>;
 
 const Quality = () => {
   const certifications = [
@@ -50,7 +50,7 @@ const Quality = () => {
                   className="flex items-center gap-4 text-white font-medium"
                 >
                   <div className="bg-[#F97316] rounded-full p-1">
-                    <CheckCircle className="text-white" />
+                    <CheckCircle size={16} className="text-white" />
                   </div>
                   {item}
                 </motion.li>

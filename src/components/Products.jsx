@@ -99,20 +99,20 @@ const Products = () => {
           {/* Download PDF button */}
           <a
             href="/kavery-catalog.pdf"
-            download="Kaveru-Tubing-Solutions-Catalog.pdf"
+            download="Kavery-Tubing-Solutions-Catalog.pdf"
             className="flex items-center gap-3 bg-[#0A2540] text-white px-10 py-4 rounded-full font-bold hover:bg-[#1F2937] transition-all transform hover:scale-105 shadow-xl"
           >
-            <span>📄</span> Download Full Catalog
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Download Full Catalog
           </a>
 
           {/* WhatsApp button */}
           <a
-            href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20request%20the%20Kaveru%20Tubing%20Solutions%20product%20catalog."
+            href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20request%20the%20Kavery%20Tubing%20Solutions%20product%20catalog."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-[#128C7E] text-white px-10 py-4 rounded-full font-bold hover:bg-[#075E54] transition-all transform hover:scale-105 shadow-xl"
           >
-            <span>💬</span> Request on WhatsApp
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Request on WhatsApp
           </a>
         </motion.div>
       </div>
