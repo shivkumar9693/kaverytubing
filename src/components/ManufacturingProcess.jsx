@@ -8,13 +8,13 @@ const ProcessStep = ({ number, title, description }) => (
     className="relative flex items-start gap-6 group"
   >
     <div className="flex-shrink-0 relative">
-      <div className="w-16 h-16 rounded-2xl bg-[#0A2540] flex items-center justify-center text-white font-black text-2xl shadow-lg border-4 border-white group-hover:scale-110 group-hover:bg-[#F97316] transition-all z-10 relative">
+      <div className="w-16 h-16 rounded-2xl bg-black flex items-center justify-center text-white font-black text-2xl shadow-lg border-4 border-white group-hover:scale-110 group-hover:bg-[#EF4444] transition-all z-10 relative">
         {number}
       </div>
       <div className="absolute top-16 bottom-[-40px] left-1/2 w-0.5 -translate-x-1/2 bg-gray-200 group-last:hidden" />
     </div>
     <div className="pt-3 pb-10">
-      <h3 className="text-2xl font-bold text-[#0A2540] mb-2">{title}</h3>
+      <h3 className="text-2xl font-bold text-black mb-2">{title}</h3>
       <p className="text-gray-600 font-medium leading-relaxed max-w-2xl">{description}</p>
     </div>
   </motion.div>
@@ -60,7 +60,7 @@ const ManufacturingProcess = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-[#F97316] font-black uppercase tracking-[0.2em] italic"
+            className="text-[#EF4444] font-black uppercase tracking-[0.2em] italic"
           >
             Manufacturing Process
           </motion.p>
@@ -68,11 +68,11 @@ const ManufacturingProcess = () => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold text-[#0A2540]"
+            className="text-4xl md:text-5xl font-extrabold text-black uppercase tracking-tighter"
           >
             How We Build Our Products
           </motion.h2>
-          <div className="w-24 h-1.5 bg-[#F97316] mx-auto rounded-full mt-6" />
+          <div className="w-24 h-1.5 bg-[#EF4444] mx-auto rounded-full mt-6" />
         </div>
 
         <div className="max-w-4xl mx-auto">

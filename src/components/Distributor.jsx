@@ -1,117 +1,175 @@
-import { motion } from 'framer-motion';
-import distributorCard from '../assets/distributor_card.png';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+
+const distributors = [
+  {
+    id: 1,
+    name: "Siddhi Vinayak Tubing Solutions",
+    phone: "+91 79842 29316",
+    email: "Siddhivinayaktubing@gmail.com",
+    contactPerson: "Mahi Patel",
+    designation: "Sales Manager",
+    address: "103, SHYAMAL APRT, 132 Feet Circular Road, Vadaj Metro Station, Nava Wadaj, Ahmedabad, Gujarat, 380013",
+    gst: "24CJTPC8052NIZO",
+    description: "Authorized Distribution Partner. We provide immediate stock availability in Gujarat, expert technical consultation, and fast logistics with quick delivery for all your stainless steel needs."
+  },
+  {
+    id: 2,
+    name: "Kaveri Impex",
+    phone: "+91 98765 43210",
+    email: "info@kaveriimpex.com",
+    contactPerson: "Sales Executive",
+    designation: "Distribution Manager",
+    address: "Mumbai, Maharashtra, India",
+    gst: "27ABCDE1234F1Z5",
+    description: "Leading exporters and distributors of high-quality stainless steel seamless pipes and tubes. Connecting Kavery Tubing's premium products to global markets."
+  }
+];
 
 const Distributor = () => {
-  return (
-    <section id="distributor" className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Left: Content */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex-1 space-y-6"
-          >
-            <div className="inline-block px-4 py-1.5 bg-[#0A2540]/10 rounded-full">
-              <span className="text-[#0A2540] text-sm font-bold tracking-widest uppercase italic">
-                Our Distribution Network
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0A2540] leading-tight">
-              Authorized <span className="text-[#F97316]">Distributor</span>
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              We partner with trusted distributors to bring our high-quality stainless steel products closer to your industrial operations. Connect with our authorized distributors for quick access, reliable service, and technical support.
-            </p>
-            <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm mt-6 hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-bold text-[#0A2540] mb-2">Siddhi Vinayak Tubing Solutions</h3>
-              <p className="text-[#F97316] font-bold mb-4 uppercase tracking-wider text-sm">Authorized Distribution Partner</p>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-[#F97316]/10 flex items-center justify-center text-[#F97316]"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  <span className="text-gray-700 font-semibold">Immediate Stock Availability in Gujarat</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-[#F97316]/10 flex items-center justify-center text-[#F97316]"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  <span className="text-gray-700 font-semibold">Expert Technical Consultation</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-[#F97316]/10 flex items-center justify-center text-[#F97316]"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  <span className="text-gray-700 font-semibold">Fast Logistics and Quick Delivery</span>
-                </li>
-              </ul>
-            </div>
-          </motion.div>
+  const [selectedId, setSelectedId] = useState(null);
 
-          {/* Right: Digital Business Card */}
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-1 relative w-full flex justify-center perspective-1000"
+  return (
+    <section id="distributor" className="py-24 bg-[#050505] relative overflow-hidden">
+      {/* Refined Industrial Background */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,#EF4444_0%,transparent_25%)] opacity-20" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,#EF4444_0%,transparent_25%)] opacity-10" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="space-y-4">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#EF4444]/10 border border-[#EF4444]/20"
+            >
+              <div className="w-2 h-2 rounded-full bg-[#EF4444] animate-pulse" />
+              <span className="text-[#EF4444] text-[10px] font-black uppercase tracking-[0.3em]">
+                Partner Network
+              </span>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-6xl font-black text-white leading-tight uppercase tracking-tighter"
+            >
+              Authorized <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Distributors</span>
+            </motion.h2>
+          </div>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-gray-500 text-sm max-w-sm font-medium border-l border-red-900/30 pl-6"
           >
-            <div className="relative z-10 w-full max-w-md transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(10,37,64,0.3)]">
-              <div className="bg-[#111827] rounded-2xl shadow-2xl border border-gray-700/50 overflow-hidden relative group">
-                
-                {/* Metallic shine texture effect */}
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] opacity-10 pointer-events-none mix-blend-overlay"></div>
-                
-                {/* Top Industrial Orange Accent Line */}
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#F97316] via-orange-400 to-[#F97316]"></div>
-                
-                <div className="p-8 sm:p-10 flex flex-col items-center text-center border-b border-gray-800/60 relative bg-[#0A2540]/80 backdrop-blur-md">
-                  <div className="w-20 h-20 mb-5 relative flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl shadow-inner border border-gray-600 transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
-                    <svg className="w-10 h-10 text-gray-300 relative z-10 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
+            Connecting our precision-engineered products to local markets through a network of certified logistics and technical partners.
+          </motion.p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-min">
+          {distributors.map((dist, index) => (
+            <motion.div
+              key={dist.id}
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              onClick={() => setSelectedId(selectedId === dist.id ? null : dist.id)}
+              className={`group relative cursor-pointer ${
+                selectedId === dist.id ? 'lg:col-span-2 row-span-1' : ''
+              }`}
+            >
+              <div className={`h-full min-h-[280px] rounded-2xl transition-all duration-500 border overflow-hidden flex flex-col
+                ${selectedId === dist.id 
+                  ? 'bg-white border-[#EF4444] shadow-[0_20px_50px_rgba(239,68,68,0.15)]' 
+                  : 'bg-[#0A0A0A] border-white/5 hover:border-[#EF4444]/30 shadow-2xl'}`}
+              >
+                {/* Header Area */}
+                <div className={`p-8 flex-1 flex flex-col justify-between transition-colors duration-500
+                  ${selectedId === dist.id ? 'text-black' : 'text-white'}`}
+                >
+                  <div>
+                    <div className="flex justify-between items-start mb-6">
+                      <div className={`text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded border
+                        ${selectedId === dist.id ? 'border-black/10 text-black/40' : 'border-white/10 text-white/20'}`}
+                      >
+                        ID: 00{dist.id}
+                      </div>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300
+                        ${selectedId === dist.id ? 'border-black/10' : 'border-white/10 group-hover:border-[#EF4444] group-hover:bg-[#EF4444]'}`}
+                      >
+                        <svg className={`w-4 h-4 transition-transform duration-500 ${selectedId === dist.id ? 'rotate-45' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 4v16m8-8H4" />
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-2xl font-black leading-none uppercase tracking-tighter mb-2">
+                      {dist.name.split(' ').slice(0, 2).join(' ')}<br />
+                      <span className={`${selectedId === dist.id ? 'text-[#EF4444]' : 'text-white/40'}`}>
+                        {dist.name.split(' ').slice(2).join(' ')}
+                      </span>
+                    </h3>
+                    
+                    {!selectedId && (
+                      <p className="text-gray-600 text-[10px] font-bold uppercase tracking-widest mt-4 group-hover:text-[#EF4444] transition-colors">
+                        Click to view details
+                      </p>
+                    )}
                   </div>
-                  <h3 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Siddhi Vinayak</h3>
-                  <p className="text-xs text-gray-400 tracking-[0.3em] uppercase font-bold mt-2">Tubing Solutions</p>
-                  
-                  <div className="mt-8 pt-8 border-t border-gray-700 w-full relative">
-                    <div className="absolute -top-[1px] left-1/2 -translate-x-1/2 w-16 h-[2px] bg-[#F97316]"></div>
-                    <h4 className="text-xl font-bold text-white tracking-wide">Mahi Patel</h4>
-                    <p className="text-sm text-[#F97316] font-medium mt-1 uppercase tracking-[0.15em]">Sales Manager</p>
-                  </div>
+
+                  <AnimatePresence>
+                    {selectedId === dist.id && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="mt-8 space-y-6"
+                      >
+                        <p className="text-xs font-medium text-gray-500 leading-relaxed border-l-2 border-[#EF4444] pl-4 italic">
+                          {dist.description}
+                        </p>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          <div className="space-y-1">
+                            <span className="text-[9px] font-black uppercase text-gray-400 tracking-widest">Phone Contact</span>
+                            <p className="text-sm font-black">{dist.phone}</p>
+                          </div>
+                          <div className="space-y-1">
+                            <span className="text-[9px] font-black uppercase text-gray-400 tracking-widest">Official Email</span>
+                            <p className="text-sm font-black truncate">{dist.email}</p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
 
-                <div className="p-8 sm:p-10 bg-[#111827]/90 backdrop-blur-sm space-y-6 relative">
-                  <div className="flex items-center gap-5 text-gray-300 group/item">
-                    <span className="w-11 h-11 rounded-lg bg-gray-800/80 border border-gray-700 flex items-center justify-center text-gray-400 group-hover/item:bg-[#F97316] group-hover/item:border-[#F97316] group-hover/item:text-white transition-all shadow-inner">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                    </span>
-                    <p className="font-bold text-sm tracking-widest text-gray-200">+91 79842 29316</p>
-                  </div>
-                  <div className="flex items-center gap-5 text-gray-300 group/item">
-                    <span className="w-11 h-11 rounded-lg bg-gray-800/80 border border-gray-700 flex items-center justify-center text-gray-400 group-hover/item:bg-[#F97316] group-hover/item:border-[#F97316] group-hover/item:text-white transition-all shadow-inner">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    </span>
-                    <p className="font-bold text-sm tracking-wide text-gray-200 break-all">Siddhivinayaktubing@gmail.com</p>
-                  </div>
-                  <div className="flex items-start gap-5 text-gray-300 group/item">
-                    <span className="w-11 h-11 rounded-lg bg-gray-800/80 border border-gray-700 flex flex-shrink-0 items-center justify-center text-gray-400 group-hover/item:bg-[#F97316] group-hover/item:border-[#F97316] group-hover/item:text-white transition-all shadow-inner mt-1">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    </span>
-                    <p className="text-[11px] font-semibold leading-relaxed text-gray-400 uppercase tracking-widest">
-                      103, SHYAMAL APRT, 132 Feet Circular Road, Vadaj Metro Station, Nava Wadaj, Ahmedabad, Gujarat, 380013
-                    </p>
-                  </div>
-                  <div className="pt-6 mt-6 border-t border-gray-800 flex items-center justify-between">
-                    <span className="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em]">GST Number</span>
-                    <span className="text-xs font-bold text-[#F97316] tracking-widest bg-gray-800/80 px-4 py-2 rounded-lg border border-gray-700 shadow-inner">24CJTPC8052NIZO</span>
+                {/* Footer Bar */}
+                <div className={`p-6 border-t transition-colors duration-500
+                  ${selectedId === dist.id ? 'bg-black text-white border-transparent' : 'bg-white/5 text-gray-400 border-white/5'}`}
+                >
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h4 className="text-[11px] font-black uppercase tracking-tight">{dist.contactPerson}</h4>
+                      <p className={`text-[9px] font-bold uppercase tracking-widest ${selectedId === dist.id ? 'text-[#EF4444]' : 'text-gray-600'}`}>
+                        {dist.designation}
+                      </p>
+                    </div>
+                    {selectedId === dist.id && (
+                      <div className="text-right">
+                         <span className="text-[8px] font-black text-gray-500 uppercase block mb-1">GST Registration</span>
+                         <span className="text-[10px] font-black tracking-widest">{dist.gst}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Design accents */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#0A2540]/10 to-transparent rounded-full blur-3xl -z-10" />
-            <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-[#F97316]/10 rounded-full blur-2xl -z-10" />
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

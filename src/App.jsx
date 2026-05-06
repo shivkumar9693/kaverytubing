@@ -47,7 +47,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="relative bg-white selection:bg-[#F97316] selection:text-white">
+      <div className="relative bg-white selection:bg-[#EF4444] selection:text-white">
         <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
 
         <Routes>

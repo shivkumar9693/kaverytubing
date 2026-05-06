@@ -66,13 +66,13 @@ const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <footer className="bg-[#111827] text-white pt-20 pb-10 relative overflow-hidden">
+    <footer className="bg-[#050505] text-white pt-20 pb-10 relative overflow-hidden border-t border-red-900/20">
       {/* Subtle static decorative blobs */}
-      <div className="absolute -bottom-16 -right-16 w-80 h-80 bg-[#0A2540] rounded-full blur-[90px] opacity-30 pointer-events-none" />
-      <div className="absolute top-0 left-0 w-56 h-56 bg-[#F97316] rounded-full blur-[120px] opacity-5 pointer-events-none" />
+      <div className="absolute -bottom-16 -right-16 w-80 h-80 bg-[#EF4444] rounded-full blur-[100px] opacity-10 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-56 h-56 bg-red-600 rounded-full blur-[120px] opacity-5 pointer-events-none" />
 
       {/* Thin top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#F97316] to-transparent opacity-40" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#EF4444] to-transparent opacity-40" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
@@ -84,8 +84,8 @@ const Footer = () => {
                 <img src="/logo.png" alt="Kavery Tubing Solutions Pvt. Ltd." className="w-full h-full object-cover" />
               </div>
               <div className="leading-tight">
-                <div className="text-2xl font-black italic tracking-tighter">
-                  KAVERY<span className="text-[#F97316]">TUBING</span>
+                <div className="text-2xl font-black italic tracking-tighter uppercase">
+                  KAVERY<span className="text-[#EF4444]">TUBING</span>
                 </div>
                 <div className="text-[10px] text-white/60 font-bold tracking-[0.22em] uppercase">
                   Solutions Pvt. Ltd.
@@ -117,7 +117,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-6 lg:ml-8">
-            <h4 className="text-sm font-bold text-white border-b-2 border-[#F97316] inline-block pb-1 uppercase tracking-widest">
+            <h4 className="text-sm font-bold text-white border-b-2 border-[#EF4444] inline-block pb-1 uppercase tracking-widest">
               Quick Links
             </h4>
             <ul className="space-y-3 text-sm text-gray-400 font-medium uppercase tracking-widest">
@@ -125,9 +125,9 @@ const Footer = () => {
                 <li key={id}>
                   <a
                     href={`#${id}`}
-                    className="hover:text-[#F97316] transition-colors duration-200 flex items-center gap-2 group"
+                    className="hover:text-[#EF4444] transition-colors duration-200 flex items-center gap-2 group"
                   >
-                    <span className="text-[#F97316] opacity-60 group-hover:opacity-100 transition-opacity">›</span>
+                    <span className="text-[#EF4444] opacity-60 group-hover:opacity-100 transition-opacity">›</span>
                     {id.charAt(0).toUpperCase() + id.slice(1)}
                   </a>
                 </li>
@@ -137,7 +137,7 @@ const Footer = () => {
 
           {/* Specialties */}
           <div className="space-y-6">
-            <h4 className="text-sm font-bold text-white border-b-2 border-[#F97316] inline-block pb-1 uppercase tracking-widest">
+            <h4 className="text-sm font-bold text-white border-b-2 border-[#EF4444] inline-block pb-1 uppercase tracking-widest">
               Our Specialties
             </h4>
             <ul className="space-y-3 text-sm text-gray-400">
@@ -149,7 +149,7 @@ const Footer = () => {
                 'Custom Metal Fabrication',
               ].map((s) => (
                 <li key={s} className="flex items-center gap-2 hover:text-white transition-colors duration-200 cursor-default">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F97316] opacity-70 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#EF4444] opacity-70 flex-shrink-0" />
                   {s}
                 </li>
               ))}
@@ -158,7 +158,7 @@ const Footer = () => {
 
           {/* Reach Us */}
           <div className="space-y-6">
-            <h4 className="text-sm font-bold text-white border-b-2 border-[#F97316] inline-block pb-1 uppercase tracking-widest">
+            <h4 className="text-sm font-bold text-white border-b-2 border-[#EF4444] inline-block pb-1 uppercase tracking-widest">
               Reach Us
             </h4>
             <div className="text-gray-400 text-sm space-y-4">
@@ -177,7 +177,7 @@ const Footer = () => {
                 },
               ].map(({ icon, text }, idx) => (
                 <p key={idx} className="flex items-start gap-3 hover:text-white transition-colors duration-200 cursor-pointer group">
-                  <span className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center flex-shrink-0 text-[#F97316] group-hover:bg-[#F97316] group-hover:text-white transition-all duration-300">
+                  <span className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center flex-shrink-0 text-[#EF4444] group-hover:bg-[#EF4444] group-hover:text-white transition-all duration-300">
                     {icon}
                   </span>
                   <span className="pt-1.5">{text}</span>
@@ -194,10 +194,10 @@ const Footer = () => {
               © {new Date().getFullYear()} Kavery Tubing Solutions Pvt. Ltd. All Rights Reserved.
             </p>
             <div className="flex gap-6 text-[11px] text-gray-500 font-semibold uppercase tracking-widest">
-              <Link to="/privacy-policy" className="hover:text-[#F97316] transition-colors duration-200">
+              <Link to="/privacy-policy" className="hover:text-[#EF4444] transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link to="/terms-of-service" className="hover:text-[#F97316] transition-colors duration-200">
+              <Link to="/terms-of-service" className="hover:text-[#EF4444] transition-colors duration-200">
                 Terms of Service
               </Link>
             </div>
@@ -209,7 +209,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         title="Back to top"
-        className="fixed bottom-8 right-8 bg-[#F97316] text-white p-4 rounded-xl shadow-2xl hover:bg-[#ea6b10] active:scale-95 transition-all duration-200 z-50 border border-orange-400/20"
+        className="fixed bottom-8 right-8 bg-[#EF4444] text-white p-4 rounded-xl shadow-2xl hover:bg-red-600 active:scale-95 transition-all duration-200 z-50 border border-red-400/20"
       >
         <ArrowUp size={22} />
       </button>

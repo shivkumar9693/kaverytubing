@@ -22,16 +22,16 @@ const ProductCard = ({ title, description, image, index, slug }) => {
           alt={title} 
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
         />
-        <div className="absolute inset-0 bg-[#0A2540]/20 group-hover:bg-transparent transition-colors duration-500" />
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
       </div>
       <div className="p-8">
-        <h3 className="text-2xl font-bold text-[#0A2540] mb-3">{title}</h3>
+        <h3 className="text-2xl font-bold text-black mb-3">{title}</h3>
         <p className="text-gray-600 mb-6 leading-relaxed">
           {description}
         </p>
         <button 
           onClick={() => navigate(`/product/${slug}`)}
-          className="text-[#F97316] font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform cursor-pointer"
+          className="text-[#EF4444] font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform cursor-pointer"
         >
           View Specifications 
           <span className="text-2xl">→</span>
@@ -70,18 +70,18 @@ const Products = () => {
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-[#F97316] font-black uppercase tracking-[0.2em] italic"
+            className="text-[#EF4444] font-black uppercase tracking-[0.2em] italic"
           >
             Our Product Range
           </motion.p>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-[#0A2540]"
+            className="text-4xl md:text-5xl font-extrabold text-black"
           >
             Engineered For Excellence
           </motion.h2>
-          <div className="w-24 h-1.5 bg-[#F97316] mx-auto rounded-full" />
+          <div className="w-24 h-1.5 bg-[#EF4444] mx-auto rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -100,7 +100,7 @@ const Products = () => {
           <a
             href="/kavery-catalog.pdf"
             download="Kavery-Tubing-Solutions-Catalog.pdf"
-            className="flex items-center gap-3 bg-[#0A2540] text-white px-10 py-4 rounded-full font-bold hover:bg-[#1F2937] transition-all transform hover:scale-105 shadow-xl"
+            className="flex items-center gap-3 bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-gray-900 transition-all transform hover:scale-105 shadow-xl"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Download Full Catalog
           </a>

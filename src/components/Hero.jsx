@@ -16,7 +16,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${heroImg})` }}
       ></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A2540] via-[#0A2540]/80 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
 
       {/* Hero Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-white">
@@ -32,7 +32,7 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6"
           >
-            Leading <span className="text-[#F97316]">Stainless Steel</span> Products 
+            Leading <span className="text-[#EF4444]">Stainless Steel</span> Products 
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, size: 0.8 }}
@@ -47,7 +47,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('contact')}
-              className="bg-[#F97316] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition-all flex items-center justify-center gap-2 shadow-2xl"
+              className="bg-[#EF4444] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-all flex items-center justify-center gap-2 shadow-2xl"
             >
               Enquire Now
             </motion.button>
@@ -55,7 +55,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('products')}
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#0A2540] transition-all flex items-center justify-center gap-2"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2"
             >
               Our Products
             </motion.button>

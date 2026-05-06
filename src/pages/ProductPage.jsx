@@ -108,7 +108,7 @@ const ProductPage = () => {
                     key={i} 
                     onClick={() => setActiveImg(i)}
                     className={`aspect-square rounded-xl border-2 overflow-hidden transition-all ${
-                      activeImg === i ? 'border-[#F97316] scale-95' : 'border-gray-100 hover:border-gray-300'
+                      activeImg === i ? 'border-[#EF4444] scale-95' : 'border-gray-100 hover:border-gray-300'
                     }`}
                   >
                     <img src={img} alt="Angle" className="w-full h-full object-cover" />
@@ -119,7 +119,7 @@ const ProductPage = () => {
 
             {/* Right: Content */}
             <div className="space-y-8">
-              <h1 className="text-4xl md:text-5xl font-black text-[#0A2540] leading-tight text-balance">
+              <h1 className="text-4xl md:text-5xl font-black text-black leading-tight text-balance uppercase tracking-tighter">
                 {product.title}
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -128,15 +128,15 @@ const ProductPage = () => {
 
               {/* Specs Table */}
               <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100">
-                <h3 className="text-xl font-bold text-[#0A2540] mb-6 flex items-center gap-2">
-                  <span className="w-2 h-8 bg-[#F97316] rounded-full" />
+                <h3 className="text-xl font-bold text-black mb-6 flex items-center gap-2 uppercase tracking-tight">
+                  <span className="w-2 h-8 bg-[#EF4444] rounded-full" />
                   Technical Specifications
                 </h3>
                 <div className="space-y-4">
                   {product.specifications?.map((spec, i) => (
                     <div key={i} className="flex border-b border-gray-200 pb-2">
                       <span className="w-1/3 font-bold text-gray-400 uppercase text-[10px] tracking-[0.2em]">{spec.label}</span>
-                      <span className="w-2/3 font-medium text-[#0A2540] text-sm md:text-base">{spec.value}</span>
+                      <span className="w-2/3 font-medium text-black text-sm md:text-base">{spec.value}</span>
                     </div>
                   ))}
                 </div>
@@ -144,7 +144,7 @@ const ProductPage = () => {
 
               <button 
                 onClick={handleQuoteClick}
-                className="w-full lg:w-max bg-[#F97316] text-white px-12 py-5 rounded-2xl font-black text-xl shadow-xl hover:bg-orange-600 transition-all cursor-pointer transform hover:scale-105"
+                className="w-full lg:w-max bg-[#EF4444] text-white px-12 py-5 rounded-2xl font-black text-xl shadow-xl hover:bg-red-700 transition-all cursor-pointer transform hover:scale-105"
               >
                 Request Instant Quote
               </button>
@@ -153,24 +153,24 @@ const ProductPage = () => {
         </section>
 
         {/* Extra Details */}
-        <section className="py-16 bg-[#0A2540] text-white">
+        <section className="py-16 bg-black text-white">
           <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-20">
              <div>
-                <h3 className="text-2xl font-bold text-[#F97316] mb-6 italic">Key Features</h3>
+                <h3 className="text-2xl font-bold text-[#EF4444] mb-6 italic uppercase tracking-widest">Key Features</h3>
                 <ul className="space-y-4">
                   {product.features?.map((f, i) => (
                     <li key={i} className="flex items-center gap-3 font-medium">
-                       <span className="text-[#F97316] text-xl">✔</span>
+                       <span className="text-[#EF4444] text-xl">✔</span>
                        {f}
                     </li>
                   ))}
                 </ul>
              </div>
              <div>
-                <h3 className="text-2xl font-bold text-[#F97316] mb-6 italic">Typical Applications</h3>
+                <h3 className="text-2xl font-bold text-[#EF4444] mb-6 italic uppercase tracking-widest">Typical Applications</h3>
                 <div className="flex flex-wrap gap-3">
                   {product.applications?.map((a, i) => (
-                    <span key={i} className="px-6 py-2.5 bg-white/10 rounded-full text-sm font-bold border border-white/5 hover:bg-[#F97316] transition-colors cursor-default">
+                    <span key={i} className="px-6 py-2.5 bg-white/10 rounded-full text-sm font-bold border border-white/5 hover:bg-[#EF4444] transition-colors cursor-default">
                       {a}
                     </span>
                   ))}

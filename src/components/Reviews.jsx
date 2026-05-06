@@ -7,7 +7,7 @@ const StarRow = ({ value }) => {
     const isFull = i < fullStars;
     const isHalf = i === fullStars && hasHalf;
     return (
-      <span key={i} className={isFull || isHalf ? 'text-[#F97316]' : 'text-gray-200'}>
+      <span key={i} className={isFull || isHalf ? 'text-[#EF4444]' : 'text-gray-200'}>
         <svg width="18" height="18" viewBox="0 0 24 24" fill={isFull || isHalf ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </span>
     );
@@ -79,63 +79,79 @@ const Reviews = () => {
   const reviewMarquee = [...reviews, ...reviews];
 
   return (
-    <section id="reviews" className="py-24 bg-gray-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 space-y-4">
+    <section id="reviews" className="py-24 bg-[#050505] overflow-hidden relative">
+      {/* Background Texture */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+        style={{ backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '10px 10px' }} 
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-20">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-[#F97316] font-black uppercase tracking-[0.2em] italic"
+            className="text-[#EF4444] font-black uppercase tracking-[0.3em] text-xs mb-4"
           >
-            Customer Reviews
+            Client Success Stories
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold text-[#0A2540]"
+            className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter"
           >
-            Trusted By Indian Industries
+            Trusted By <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Global Industries</span>
           </motion.h2>
-          <div className="w-24 h-1.5 bg-[#F97316] mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-[#EF4444] mx-auto rounded-full mt-8" />
         </div>
-
       </div>
 
       <div className="relative mt-8">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-48 bg-gradient-to-r from-gray-50 to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-48 bg-gradient-to-l from-gray-50 to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-[#050505] to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-[#050505] to-transparent z-10" />
 
-        <div className="marquee-reviews py-4">
+        <div className="marquee-reviews py-10">
           <div className="marquee-reviews__track">
             {reviewMarquee.map((r, idx) => (
               <div
                 key={`${r.name}-${idx}`}
-                className="mx-4 w-[350px] sm:w-[400px] shrink-0 bg-white rounded-3xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-shadow whitespace-normal"
+                className="mx-6 w-[380px] sm:w-[450px] shrink-0 bg-black rounded-2xl p-10 border border-white/5 shadow-2xl relative overflow-hidden group transition-all duration-500 hover:border-[#EF4444]/30"
               >
-                <div className="flex items-start justify-between gap-6">
-                  <div>
-                    <div className="text-[#0A2540] font-black text-lg">{r.name}</div>
-                    <div className="text-gray-500 text-sm font-semibold">{r.company}</div>
-                  </div>
-                  <div className="text-right shrink-0">
-                    <div className="text-[#0A2540] font-black text-sm">{r.rating.toFixed(1)}/5</div>
-                    <StarRow value={r.rating} />
-                  </div>
+                {/* Decorative Quote Icon */}
+                <div className="absolute top-6 right-8 text-[120px] font-black text-[#EF4444]/[0.03] select-none leading-none pointer-events-none group-hover:text-[#EF4444]/[0.08] transition-colors">
+                  “
                 </div>
-                <p className="mt-6 text-gray-600 leading-relaxed font-medium">“{r.comment}”</p>
+
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-8">
+                    <div className="flex flex-col">
+                      <div className="text-white font-black text-xl uppercase tracking-tighter">{r.name}</div>
+                      <div className="text-[#EF4444] text-[10px] font-bold uppercase tracking-widest mt-1 italic">{r.company}</div>
+                    </div>
+                    <div className="bg-white/5 px-3 py-1 rounded-md border border-white/10">
+                       <div className="text-white font-black text-[10px] text-center mb-1 uppercase tracking-widest opacity-40">Rating</div>
+                       <StarRow value={r.rating} />
+                    </div>
+                  </div>
+                  <p className="text-gray-400 leading-relaxed font-medium text-lg italic border-l-2 border-[#EF4444]/30 pl-6 group-hover:border-[#EF4444] transition-colors">
+                    "{r.comment}"
+                  </p>
+                </div>
+
+                {/* Bottom Accent */}
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#EF4444] group-hover:w-full transition-all duration-700" />
               </div>
             ))}
           </div>
         </div>
 
         <style>{`
-          .marquee-reviews { overflow: hidden; }
+          .marquee-reviews { overflow: hidden; position: relative; }
           .marquee-reviews__track {
             display: flex;
             width: max-content;
-            animation: marquee-reviews-scroll 45s linear infinite;
+            animation: marquee-reviews-scroll 60s linear infinite;
           }
           .marquee-reviews__track:hover {
             animation-play-state: paused;

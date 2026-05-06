@@ -2,23 +2,23 @@ import { motion } from 'framer-motion';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen pt-28 pb-20 relative overflow-hidden bg-[#0A1628]">
+    <div className="min-h-screen pt-28 pb-20 relative overflow-hidden bg-[#050505]">
 
       {/* ── Animated background blobs ── */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.12, 0.2, 0.12] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-[-100px] left-[-120px] w-[500px] h-[500px] rounded-full bg-[#F97316] blur-[140px] pointer-events-none"
+        className="absolute top-[-100px] left-[-120px] w-[500px] h-[500px] rounded-full bg-[#EF4444] blur-[140px] pointer-events-none"
       />
       <motion.div
         animate={{ scale: [1, 1.15, 1], opacity: [0.08, 0.15, 0.08] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
-        className="absolute bottom-[-80px] right-[-100px] w-[450px] h-[450px] rounded-full bg-[#1E40AF] blur-[120px] pointer-events-none"
+        className="absolute bottom-[-80px] right-[-100px] w-[450px] h-[450px] rounded-full bg-gray-600 blur-[120px] pointer-events-none"
       />
       <motion.div
         animate={{ y: [-20, 20, -20], opacity: [0.06, 0.12, 0.06] }}
         transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#F97316] blur-[180px] pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#EF4444] blur-[180px] pointer-events-none"
       />
 
       {/* ── Floating geometric shapes ── */}
@@ -59,12 +59,12 @@ const PrivacyPolicy = () => {
               initial={{ width: 0 }}
               animate={{ width: '80px' }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="h-1 bg-[#F97316] rounded-full mb-6"
+              className="h-1 bg-[#EF4444] rounded-full mb-6"
             />
-            <h1 className="text-4xl md:text-6xl font-black italic leading-tight">
-              Privacy <span className="text-[#F97316]">Policy</span>
+            <h1 className="text-4xl md:text-6xl font-black italic leading-tight uppercase tracking-tighter">
+              Privacy <span className="text-[#EF4444]">Policy</span>
             </h1>
-            <p className="mt-4 text-gray-400 font-medium">Kavery Tubing Solutions Pvt. Ltd. — Last updated April 2024</p>
+            <p className="mt-4 text-gray-400 font-medium italic">Kavery Tubing Solutions Pvt. Ltd. — Last updated April 2024</p>
           </div>
 
           <div className="space-y-12 text-gray-300 leading-relaxed font-medium text-lg">
@@ -97,11 +97,11 @@ const PrivacyPolicy = () => {
                 transition={{ delay: 0.2 + i * 0.1 }}
                 className="flex gap-6 group"
               >
-                <span className="text-5xl font-black text-[#F97316]/20 group-hover:text-[#F97316]/40 transition-colors shrink-0 leading-none select-none">
+                <span className="text-5xl font-black text-[#EF4444]/20 group-hover:text-[#EF4444]/40 transition-colors shrink-0 leading-none select-none">
                   {section.number}
                 </span>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-4 italic">{section.title}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4 italic uppercase tracking-tight">{section.title}</h3>
                   <p>{section.body}</p>
                 </div>
               </motion.section>

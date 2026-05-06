@@ -2,86 +2,166 @@ import { motion } from 'framer-motion';
 import aboutImg from '../assets/about.png';
 
 const About = () => {
+  const reasons = [
+    { title: "Uncompromising Quality", desc: "Rigorous testing and strict adherence to international standards." },
+    { title: "State-of-the-Art Facilities", desc: "Equipped with the latest manufacturing and engineering technology." },
+    { title: "Global Export Network", desc: "Seamless supply chain capable of delivering worldwide." },
+    { title: "Custom Specifications", desc: "Tailored dimensions, grades, and finishes to meet unique needs." },
+    { title: "Timely Delivery", desc: "Optimized production timelines ensuring your projects stay on track." },
+    { title: "Expert Engineering Team", desc: "Decades of collective experience driving innovation." },
+    { title: "Sustainable Practices", desc: "Eco-friendly manufacturing processes and material sourcing." },
+    { title: "Competitive Pricing", desc: "Premium quality stainless steel at market-leading prices." }
+  ];
+
   return (
-    <section id="about" className="py-24 bg-white overflow-hidden">
+    <section id="about" className="bg-[#fcfcfc] py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Left: Content */}
+        
+        <div className="text-center mb-20">
+          <div className="inline-block px-4 py-1.5 bg-black/5 rounded-full mb-4">
+            <span className="text-black text-sm font-bold tracking-widest uppercase italic">
+              Discover Kavery Tubing
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black">
+            About Our <span className="text-[#EF4444]">Company</span>
+          </h2>
+        </div>
+
+        <div className="space-y-24 overflow-hidden px-4">
+          
+          {/* Card 1: About Us - Slides in from Left */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex-1 space-y-6"
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl border border-gray-100 flex flex-col xl:flex-row gap-12 items-center"
           >
-            <div className="inline-block px-4 py-1.5 bg-[#0A2540]/10 rounded-full">
-              <span className="text-[#0A2540] text-sm font-bold tracking-widest uppercase italic">
-                About Our Company
-              </span>
+            <div className="flex-1 space-y-6">
+              <h3 className="text-4xl font-black text-black mb-6 flex items-center gap-4">
+                <span className="w-10 h-1.5 bg-[#EF4444] rounded-full"></span>
+                About Us
+              </h3>
+              <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+                <span className="font-bold text-black">Kavery Tubing Solutions</span> is a premier manufacturer and exporter of high-quality stainless steel pipes, tubes, and fittings. With a legacy of excellence, we have established ourselves as a trusted partner for diverse industrial sectors globally.
+              </p>
+              <div className="grid grid-cols-2 gap-6 pt-4">
+                <div className="bg-red-50 p-6 rounded-3xl border border-red-100">
+                  <h4 className="text-4xl md:text-5xl font-black text-[#EF4444]">20+</h4>
+                  <p className="text-sm font-bold text-gray-500 uppercase tracking-wider mt-2">Years Exp</p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-3xl border border-gray-100">
+                  <h4 className="text-4xl md:text-5xl font-black text-black">500+</h4>
+                  <p className="text-sm font-bold text-gray-500 uppercase tracking-wider mt-2">Projects</p>
+                </div>
+              </div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0A2540] leading-tight">
-              Crafting Quality <span className="text-[#F97316]">Stainless Steel</span> For Global Industries
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              We are a leading manufacturer and exporter of premium stainless steel pipes, tubes, and fittings. Our state-of-the-art facilities and cutting-edge technology ensure every product meets the highest international standards of quality and durability.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              With a legacy of excellence spanning over two decades, we've served diverse industrial sectors, from oil and gas to pharmaceutical and food processing, delivering precision-engineered solutions that last a lifetime.
-            </p>
+            <div className="flex-1 w-full relative">
+              <div className="absolute inset-0 bg-[#EF4444] rounded-3xl rotate-3 opacity-20"></div>
+              <img src={aboutImg} alt="About Us" className="w-full h-[400px] object-cover rounded-3xl shadow-lg relative z-10" />
+            </div>
+          </motion.div>
+
+          {/* Card 2: Our Vision - Slides in from Right */}
+          <motion.div 
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="bg-black rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-gray-800 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#EF4444] opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gray-500 opacity-10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
             
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm">
-              <h3 className="text-2xl font-bold text-[#0A2540] mb-4">Why Choose Us?</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F97316] font-bold mt-0.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  <span className="text-gray-700 font-medium">Uncompromising Quality Control & Testing</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F97316] font-bold mt-0.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  <span className="text-gray-700 font-medium">State-of-the-art Manufacturing Facilities</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F97316] font-bold mt-0.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  <span className="text-gray-700 font-medium">Timely Global Delivery & Export Capabilities</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#F97316] font-bold mt-0.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  <span className="text-gray-700 font-medium">Custom Dimensions & Grade Specifications</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="grid grid-cols-2 gap-8 py-4">
-              <div>
-                <h3 className="text-4xl font-black text-[#0A2540]">20+</h3>
-                <p className="text-gray-500 font-medium">Years Of Experience</p>
+            <div className="relative z-10 max-w-4xl mx-auto text-center">
+              <h3 className="text-4xl font-black text-white mb-10 flex items-center justify-center gap-4">
+                <span className="w-10 h-1.5 bg-[#EF4444] rounded-full"></span>
+                Our Vision
+                <span className="w-10 h-1.5 bg-[#EF4444] rounded-full"></span>
+              </h3>
+              <div className="relative bg-white/5 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-white/10">
+                <div className="absolute -top-6 -left-2 text-8xl text-[#EF4444]/30 font-serif leading-none">"</div>
+                <p className="text-white md:text-3xl text-2xl font-medium leading-relaxed italic relative z-10">
+                  To be the global benchmark in stainless steel manufacturing, recognized for our relentless pursuit of quality, innovation, and sustainable industrial practices.
+                </p>
+                <div className="absolute -bottom-12 right-2 text-8xl text-[#EF4444]/30 font-serif leading-none rotate-180">"</div>
               </div>
-              <div>
-                <h3 className="text-4xl font-black text-[#F97316]">500+</h3>
-                <p className="text-gray-500 font-medium">Projects Completed</p>
-              </div>
+              <p className="text-gray-400 text-lg md:text-xl leading-relaxed mt-10 max-w-3xl mx-auto">
+                We envision a future where our precision-engineered solutions form the backbone of critical infrastructure worldwide, driving progress and reliability.
+              </p>
             </div>
           </motion.div>
 
-          {/* Right: Image with Accents */}
+          {/* Card 3: Our History - Slides in from Left */}
           <motion.div 
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-1 relative"
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="bg-gray-100 rounded-[2.5rem] p-8 md:p-12 shadow-inner border border-gray-200"
           >
-            <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl border-2 border-gray-100">
-              <img 
-                src={aboutImg} 
-                alt="Stainless Steel Factory" 
-                className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700" 
-              />
+            <h3 className="text-4xl font-black text-black mb-12 flex items-center justify-center gap-4">
+              <span className="w-10 h-1.5 bg-[#EF4444] rounded-full"></span>
+              Our History
+              <span className="w-10 h-1.5 bg-[#EF4444] rounded-full"></span>
+            </h3>
+            
+            <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
+              {/* History Timeline */}
+              <div className="flex-1 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 hover:-translate-y-2 transition-transform duration-500">
+                <div className="inline-block bg-[#EF4444] text-white font-black text-xl px-4 py-1 rounded-lg mb-6 shadow-md">2005</div>
+                <h4 className="text-2xl font-black text-black mb-4">Foundation</h4>
+                <p className="text-gray-600 leading-relaxed">Established with a clear vision to provide premium stainless steel components to local industries, starting with a modest but highly capable facility.</p>
+              </div>
+              
+              <div className="flex-1 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 hover:-translate-y-2 transition-transform duration-500">
+                <div className="inline-block bg-black text-white font-black text-xl px-4 py-1 rounded-lg mb-6 shadow-md">2012</div>
+                <h4 className="text-2xl font-black text-black mb-4">Expansion</h4>
+                <p className="text-gray-600 leading-relaxed">Opened our state-of-the-art 50,000 sq ft manufacturing plant, fully equipped with the latest automated machinery to scale our precision engineering.</p>
+              </div>
+
+              <div className="flex-1 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 hover:-translate-y-2 transition-transform duration-500">
+                <div className="inline-block bg-[#EF4444] text-white font-black text-xl px-4 py-1 rounded-lg mb-6 shadow-md">2018+</div>
+                <h4 className="text-2xl font-black text-black mb-4">Global Reach</h4>
+                <p className="text-gray-600 leading-relaxed">Achieved key international certifications and began exporting to over 30 countries worldwide, cementing our position in the global market.</p>
+              </div>
             </div>
-            {/* Design accents */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#F97316] rounded-2xl -z-0 opacity-20 transform rotate-12" />
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-[#0A2540] rounded-2xl -z-0 opacity-10 transform -rotate-12" />
           </motion.div>
+
+          {/* Card 4: Why Choose Us - Slides in from Right */}
+          <motion.div 
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl border border-gray-100"
+          >
+            <div className="text-center mb-16">
+              <h3 className="text-4xl md:text-5xl font-black text-black mb-6 uppercase tracking-tight">
+                Why Choose <span className="text-[#EF4444]">Us</span>
+              </h3>
+              <div className="inline-block bg-black text-white px-8 py-3 rounded-full shadow-lg transform -rotate-1">
+                <p className="text-lg md:text-xl font-bold tracking-wide">
+                  8 Reasons that make us <span className="text-[#EF4444]">Industry Leaders</span>
+                </p>
+              </div>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {reasons.map((reason, index) => (
+                <div key={index} className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:bg-black hover:text-white transition-all duration-500 group hover:shadow-xl hover:-translate-y-2 relative overflow-hidden">
+                  <div className="absolute -bottom-4 -right-4 text-[#EF4444] font-black text-8xl opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none">
+                    {index + 1}
+                  </div>
+                  <div className="text-[#EF4444] font-black text-4xl mb-4 group-hover:scale-110 transition-transform duration-500 origin-left">0{index + 1}.</div>
+                  <h4 className="text-xl font-bold text-black group-hover:text-white mb-3 relative z-10">{reason.title}</h4>
+                  <p className="text-gray-500 group-hover:text-gray-300 text-sm leading-relaxed relative z-10 font-medium">{reason.desc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

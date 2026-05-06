@@ -14,10 +14,13 @@ const Quality = () => {
   ];
 
   return (
-    <section id="quality" className="relative py-24 bg-[#0A2540] overflow-hidden">
+    <section id="quality" className="relative py-24 bg-black overflow-hidden border-y border-red-900/10">
       {/* Decorative metal texture overlay */}
-      <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')]" />
+      <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')]" />
       
+      {/* Red Glow */}
+      <div className="absolute -bottom-1/4 -left-1/4 w-full h-full bg-[#EF4444] rounded-full blur-[180px] opacity-10 pointer-events-none" />
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           <motion.div 
@@ -26,10 +29,10 @@ const Quality = () => {
             viewport={{ once: true }}
             className="flex-1 text-white"
           >
-            <span className="text-[#F97316] font-black uppercase tracking-widest italic mb-4 block">
+            <span className="text-[#EF4444] font-black uppercase tracking-widest italic mb-4 block">
               Quality Standards
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight uppercase tracking-tighter">
               Uncompromising Quality <br /> In Every Component
             </h2>
             <p className="text-gray-400 text-lg mb-10 leading-relaxed max-w-xl">
@@ -49,7 +52,7 @@ const Quality = () => {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-center gap-4 text-white font-medium"
                 >
-                  <div className="bg-[#F97316] rounded-full p-1">
+                  <div className="bg-[#EF4444] rounded-full p-1">
                     <CheckCircle size={16} className="text-white" />
                   </div>
                   {item}
@@ -67,10 +70,10 @@ const Quality = () => {
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -5, backgroundColor: "rgba(249, 115, 22, 0.1)" }}
+                whileHover={{ y: -5, backgroundColor: "rgba(239, 68, 68, 0.1)" }}
                 className="bg-white/5 border border-white/10 backdrop-blur-sm p-10 rounded-2xl flex flex-col items-center justify-center text-center group transition-colors"
               >
-                <div className="text-[#F97316] mb-4 group-hover:scale-110 transition-transform">
+                <div className="text-[#EF4444] mb-4 group-hover:scale-110 transition-transform">
                   {cert.icon}
                 </div>
                 <h4 className="text-white font-bold text-xl">{cert.name}</h4>
@@ -79,7 +82,7 @@ const Quality = () => {
                     href={cert.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[#F97316] text-white font-black hover:bg-orange-600 transition-colors"
+                    className="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[#EF4444] text-white font-black hover:bg-red-700 transition-colors"
                   >
                     Open PDF
                   </a>
